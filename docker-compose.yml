@@ -55,18 +55,18 @@ services:
     deploy:
       mode: global
 
-  alertmanager:
-    image: prom/alertmanager
-    ports:
-      - 9093:9093
-    volumes:
-      - ./alertmanager/:/etc/alertmanager/
-    networks:
-      - docker0
-    restart: always
-    command:
-      - '--config.file=/etc/alertmanager/config.yml'
-      - '--storage.path=/alertmanager'
+  # alertmanager:
+  #   image: prom/alertmanager
+  #   ports:
+  #     - 9093:9093
+  #   volumes:
+  #     - ./alertmanager/:/etc/alertmanager/
+  #   networks:
+  #     - docker0
+  #   restart: always
+  #   command:
+  #     - '--config.file=/etc/alertmanager/config.yml'
+  #     - '--storage.path=/alertmanager'
 #    deploy:
 #      placement:
 #        constraints:
